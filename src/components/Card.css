@@ -1,0 +1,46 @@
+.card {
+    height: 500px;
+    background: rgba(147, 163, 161, 0.486);
+    border-radius: 8px;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card {
+  animation: cloudJiggle 4s ease-in-out infinite;
+}
+
+@keyframes cloudJiggle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-4px) rotate(0.8deg); }
+  75% { transform: translateY(2px) rotate(-0.8deg); }
+}
+
+.card:hover {
+  animation-play-state: paused;
+}
+
+.card-front {
+    opacity: 1;
+    filter: blur(0);
+    color: rgb(71, 53, 37);
+}
+
+.card-back {
+    opacity: 0;
+    filter: blur(4px);
+    color: rgb(71, 53, 37);
+}
+
+.card-front.flipped {
+    opacity: 0;
+    filter: blur(4px);
+    color: rgb(71, 53, 37);
+}
+
+.card-back.flipped {
+    opacity: 1;
+    filter: blur(0);
+    color: rgb(71, 53, 37); 
+}
